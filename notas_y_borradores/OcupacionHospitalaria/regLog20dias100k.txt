@@ -1,0 +1,76 @@
+	(1)	(2)
+VARIABLES	ocupacion	ocupacion
+		
+ln_20dias100k	17.71***	17.71***
+	(1.363)	(0.586)
+_Iestado_2		9.294***
+		(3.108)
+_Iestado_3		-9.012***
+		(3.029)
+_Iestado_4		-11.65***
+		(3.085)
+_Iestado_5		27.71***
+		(3.030)
+_Iestado_6		11.50***
+		(3.017)
+_Iestado_7		23.61***
+		(3.036)
+_Iestado_8		-1.355
+		(3.018)
+_Iestado_9		17.38***
+		(3.171)
+_Iestado_10		13.74***
+		(3.039)
+_Iestado_11		22.54***
+		(3.018)
+_Iestado_12		19.59***
+		(3.032)
+_Iestado_13		7.067**
+		(3.039)
+_Iestado_14		10.71***
+		(3.034)
+_Iestado_15		24.19***
+		(3.056)
+_Iestado_16		5.271*
+		(3.015)
+_Iestado_17		5.690*
+		(3.047)
+_Iestado_18		23.82***
+		(3.021)
+_Iestado_19		22.93***
+		(3.016)
+_Iestado_20		12.56***
+		(3.015)
+_Iestado_21		14.78***
+		(3.054)
+_Iestado_22		-7.676**
+		(3.028)
+_Iestado_23		-2.788
+		(3.072)
+_Iestado_24		2.473
+		(3.017)
+_Iestado_25		1.582
+		(3.088)
+_Iestado_26		5.221*
+		(3.070)
+_Iestado_27		12.28***
+		(3.115)
+_Iestado_28		11.92***
+		(3.016)
+_Iestado_29		1.395
+		(3.083)
+_Iestado_30		20.40***
+		(3.030)
+_Iestado_31		1.741
+		(3.029)
+_Iestado_32		2.878
+		(3.021)
+Constant	-4.737	-14.10***
+	(3.108)	(2.401)
+		
+Observations	448	448
+R-squared	0.688	0.834
+Number of estado	32	
+Estado FE	YES	
+Robust standard errors in parentheses		
+*** p<0.01, ** p<0.05, * p<0.1		

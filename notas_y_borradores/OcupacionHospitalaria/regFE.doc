@@ -1,0 +1,22 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx2448\clbrdrt\brdrs\cellx3888
+\ql \cell\qc (1)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2448\cellx3888
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx2448\clbrdrb\brdrs\cellx3888
+\ql VARIABLES\cell\qc ocupacion\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx2448\cellx3888
+\ql \cell\qc \cell\row
+\ql ln_20dias100k\cell\qc 17.57***\cell\row
+\ql \cell\qc (1.353)\cell\row
+\ql Constant\cell\qc 54.14***\cell\row
+\ql \cell\qc (1.424)\cell\row
+\ql \cell\qc \cell\row
+\ql Observations\cell\qc 448\cell\row
+\ql Number of estado\cell\qc 32\cell\row
+\ql R-squared\cell\qc 0.693\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx2448\clbrdrb\brdrs\cellx3888
+\ql Estado FE\cell\qc YES\cell\row
+\pard\qc
+Robust standard errors in parentheses\par
+*** p<0.01, ** p<0.05, * p<0.1\par
+}

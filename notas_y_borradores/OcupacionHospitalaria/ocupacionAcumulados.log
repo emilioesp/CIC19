@@ -1,0 +1,117 @@
+------------------------------------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\Emilio EG\Documents\ITAM\CIC19\notaSemanal\OcupacionHospitalaria\ocupacionAcumulados.log
+  log type:  text
+ opened on:  12 Aug 2020, 11:53:04
+
+. 
+. 
+. ***********************************************
+. ***Load data and create fechas
+. ***********************************************
+. 
+. import delimited "C:\Users\Emilio EG\Documents\ITAM\CIC19\notaSemanal\OcupacionHospitalaria\OcupacionYAcumulados.csv"
+(11 vars, 448 obs)
+
+. 
+. gen fechas=date(fecha,"YMD")
+
+. format %td fechas
+
+. 
+. /*gen ln_10dias=ln(diez_dias)
+> gen ln_15dias=ln(quince_dias)
+> gen ln_20dias=ln(veinte_dias)
+> gen ln_30dias=ln(treinta_dias)
+> gen ln_100k10=ln(cienmil_10dias)
+> gen ln_100k15=ln(cienmil_15dias)
+> gen ln_100k30=ln(cienmil_30dias)*/
+. gen ln_20dias100k=ln(cienmil_20dias)
+
+. 
+end of do-file
+
+. fechas
+unrecognized command:  fechas
+r(199);
+
+. drop if fechas>30jul2020
+30jul2020 invalid name
+r(198);
+
+. drop if fechas>"30jul2020"
+type mismatch
+r(109);
+
+. drop if fechas>date("2020-07-30","YMD")
+(32 observations deleted)
+
+. do "C:\Users\EMILIO~1\AppData\Local\Temp\STD00000000.tmp"
+
+. xi: regress ocupacion ln_20dias100k i.estado
+i.estado          _Iestado_1-32       (naturally coded; _Iestado_1 omitted)
+
+      Source |       SS       df       MS              Number of obs =     416
+-------------+------------------------------           F( 32,   383) =   63.56
+       Model |  126728.909    32  3960.27842           Prob > F      =  0.0000
+    Residual |  23863.0041   383  62.3054938           R-squared     =  0.8415
+-------------+------------------------------           Adj R-squared =  0.8283
+       Total |  150591.913   415  362.872081           Root MSE      =  7.8934
+
+-------------------------------------------------------------------------------
+    ocupacion |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------+----------------------------------------------------------------
+ln_20dias100k |   17.35325    .600856    28.88   0.000     16.17186    18.53463
+   _Iestado_2 |   25.70872   3.108356     8.27   0.000     19.59714     31.8203
+   _Iestado_3 |  -20.22546   3.159698    -6.40   0.000    -26.43798   -14.01293
+   _Iestado_4 |   -17.7203   3.227534    -5.49   0.000    -24.06621    -11.3744
+   _Iestado_5 |   40.58228    3.20055    12.68   0.000     34.28943    46.87513
+   _Iestado_6 |    1.07018   3.126734     0.34   0.732    -5.077533    7.217893
+   _Iestado_7 |   46.48886   3.294984    14.11   0.000     40.01034    52.96738
+   _Iestado_8 |   15.03365   3.120844     4.82   0.000     8.897514    21.16978
+   _Iestado_9 |    51.5374   3.097286    16.64   0.000     45.44758    57.62721
+  _Iestado_10 |   18.15597   3.144294     5.77   0.000     11.97373    24.33821
+  _Iestado_11 |   48.25656   3.264241    14.78   0.000     41.83848    54.67463
+  _Iestado_12 |   37.88733   3.104216    12.21   0.000     31.78389    43.99076
+  _Iestado_13 |   21.13883   3.096744     6.83   0.000     15.05008    27.22758
+  _Iestado_14 |   41.57963   3.399953    12.23   0.000     34.89472    48.26454
+  _Iestado_15 |    68.6161   3.237211    21.20   0.000     62.25117    74.98103
+  _Iestado_16 |   25.98974   3.185761     8.16   0.000     19.72597    32.25351
+  _Iestado_17 |   11.68115   3.109164     3.76   0.000     5.567981    17.79432
+  _Iestado_18 |   21.47863   3.106973     6.91   0.000     15.36977    27.58749
+  _Iestado_19 |   45.24771   3.214931    14.07   0.000     38.92658    51.56883
+  _Iestado_20 |   31.36595   3.160139     9.93   0.000     25.15255    37.57934
+  _Iestado_21 |   41.49413   3.123592    13.28   0.000     35.35259    47.63566
+  _Iestado_22 |   .5335284   3.096134     0.17   0.863    -5.554019    6.621076
+  _Iestado_23 |  -.0788454   3.142451    -0.03   0.980     -6.25746     6.09977
+  _Iestado_24 |    14.6703   3.146022     4.66   0.000     8.484667    20.85594
+  _Iestado_25 |   15.66421    3.10601     5.04   0.000     9.557241    21.77117
+  _Iestado_26 |   18.89521    3.10035     6.09   0.000     12.79938    24.99105
+  _Iestado_27 |   22.97981   3.129852     7.34   0.000     16.82596    29.13365
+  _Iestado_28 |   27.50492   3.160035     8.70   0.000     21.29173    33.71811
+  _Iestado_29 |   2.668485    3.17389     0.84   0.401    -3.571944    8.908914
+  _Iestado_30 |   51.67184   3.190121    16.20   0.000      45.3995    57.94418
+  _Iestado_31 |   10.62902   3.096045     3.43   0.001     4.541646    16.71639
+  _Iestado_32 |   5.249719   3.111483     1.69   0.092    -.8680066    11.36745
+        _cons |   31.11863   2.233717    13.93   0.000     26.72674    35.51051
+-------------------------------------------------------------------------------
+
+. outreg2 using regRecortada.doc, replace
+regRecortada.doc
+dir : seeout
+
+. predict ajuste_dummy
+(option xb assumed; fitted values)
+
+. 
+end of do-file
+
+. do "C:\Users\EMILIO~1\AppData\Local\Temp\STD00000000.tmp"
+
+. 
+. save "C:\Users\Emilio EG\Documents\ITAM\CIC19\notaSemanal\OcupacionHospitalaria\PrediccionRecortada.dta", replace
+(note: file C:\Users\Emilio EG\Documents\ITAM\CIC19\notaSemanal\OcupacionHospitalaria\PrediccionRecortada.dta not found)
+file C:\Users\Emilio EG\Documents\ITAM\CIC19\notaSemanal\OcupacionHospitalaria\PrediccionRecortada.dta saved
+
+. 
+. cap log close   

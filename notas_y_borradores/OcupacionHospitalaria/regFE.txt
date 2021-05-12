@@ -1,0 +1,14 @@
+	(1)
+VARIABLES	ocupacion
+	
+ln_20dias100k	17.57***
+	(1.353)
+Constant	54.14***
+	(1.424)
+	
+Observations	448
+Number of estado	32
+R-squared	0.693
+Estado FE	YES
+Robust standard errors in parentheses	
+*** p<0.01, ** p<0.05, * p<0.1	
